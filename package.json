@@ -1,0 +1,16 @@
+
+{
+  "name": "translation-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "i18next": "^23.0.1",
+    "i18next-fs-backend": "^1.1.1",
+    "i18next-http-middleware": "^3.2.2"
+  }
+}
