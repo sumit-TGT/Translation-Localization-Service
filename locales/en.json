@@ -1,0 +1,15 @@
+
+{
+  "receipt": {
+    "title": "Receipt",
+    "storeName": "Store Name",
+    "date": "Date",
+    "time": "Time",
+    "customer": "Customer",
+    "items": "Items",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total Amount",
+    "thanks": "Thank you for shopping with us!"
+  }
+}

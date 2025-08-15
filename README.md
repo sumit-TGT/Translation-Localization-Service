@@ -1,0 +1,106 @@
+# 🌐 Translation & Localization Service
+
+This service provides multilingual support for displaying receipt data based on the user's region. It uses `i18next` for managing language files and `Intl` for currency and date formatting.
+
+---
+
+## 🚀 Features
+
+- 🔄 Auto-select language based on POS region (e.g., `IN` → Hindi, `US` → English)
+- 🌍 Multi-language support using `i18next`
+- 💱 Local currency and date formatting
+- 🧾 Translate 10 receipt fields (title, store name, date, items, total, etc.)
+- ⚙️ Configuration via `.env` file
+
+---
+
+## 🛠 Tech Stack
+
+- **Node.js**
+- **Express.js**
+- **i18next**
+- **i18next-fs-backend**
+- **dotenv**
+- **Intl API** (built-in)
+
+---
+
+## 📁 Project Structure
+
+translation-service/
+├── index.js # Main Express server
+├── i18n.js # i18next configuration
+├── locales/ # Translation JSON files
+│ ├── en.json
+│ └── hi.json
+├── utils/
+│ └── formatter.js # Currency and date formatting
+├── .env # Environment variables
+├── .gitignore
+├── LICENSE
+├── package.json
+└── README.md
+
+---
+
+## 📦 Setup Instructions
+
+1. **Clone the repo**
+
+```bash
+git clone https://github.com/Sumit-TGT/translation-service.git
+cd translation-service
+
+
+2. Install Dependencies
+npm install
+
+3. Create a .env file
+PORT=3000
+STORE_NAME=TGT-Supermart
+DEFAULT_REGION=IN
+
+4. Run the Server
+npm start
+
+🌐 Usage
+Visit:
+http://localhost:3000/receipt?region=IN
+http://localhost:3000/receipt?region=US
+
+The receipt will be returned in the appropriate language with localized date and currency.
+
+🧪 Example Output (Hindi)
+{
+  "रसीद": {
+    "दुकान का नाम": "Supermart",
+    "तारीख": "15 जुलाई 2025",
+    "समय": "12:45:20 अपराह्न",
+    "ग्राहक": "Ravi Kumar",
+    "आइटम": [
+      {
+        "आइटम": "Shampoo",
+        "मात्रा": 2,
+        "कीमत": "₹199.99"
+      },
+      {
+        "आइटम": "Toothpaste",
+        "मात्रा": 1,
+        "कीमत": "₹49.99"
+      }
+    ],
+    "कुल राशि": "₹449.97",
+    "हमसे खरीदारी करने के लिए धन्यवाद!": ""
+  }
+
+
+📜 License
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+Sumit Kumar
+[TerraGidTech]
+
+
+
+
